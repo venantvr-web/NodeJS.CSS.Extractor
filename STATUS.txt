@@ -1,0 +1,20 @@
+✅ Critical CSS Extractor - Installation réussie
+
+📍 Emplacement: /var/www/nodejs-css-extractor
+🌐 URL: http://localhost:3500
+🔧 API: http://localhost:3500/api/extract
+
+📊 Statut du serveur:
+{"status":"ok","service":"nodejs-css-extractor"}
+
+📁 Fichiers créés:
+total 52K
+-rw-rw-r--   1 rvv rvv 3,2K janv. 28 16:58 app.js
+-rw-rw-r--   1 rvv rvv  387 janv. 28 17:06 nodejs-css-extractor.service
+-rw-rw-r--   1 rvv rvv 8,7K janv. 28 16:58 index.html
+-rw-rw-r--   1 rvv rvv  473 janv. 28 16:59 package.json
+-rw-rw-r--   1 rvv rvv 1,5K janv. 28 16:59 README.md
+-rw-rw-r--   1 rvv rvv 5,2K janv. 28 16:59 server.js
+-rwxrwxr-x   1 rvv rvv  264 janv. 28 17:05 start.sh
+-rw-rw-r--   1 rvv rvv  278 janv. 28 17:07 STATUS.txt
+-rw-rw-r--   1 rvv rvv 2,3K janv. 28 17:06 UTILISATION.md
