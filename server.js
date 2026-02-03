@@ -2,6 +2,7 @@ const express = require('express');
 const puppeteer = require('puppeteer');
 const path = require('path');
 const fs = require('fs');
+const CleanCSS = require('clean-css');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -174,7 +175,8 @@ app.post('/api/extract', async (req, res) => {
                 '--no-sandbox',
                 '--disable-setuid-sandbox',
                 '--disable-dev-shm-usage',
-                '--disable-gpu'
+                '--disable-gpu',
+                '--ignore-certificate-errors'
             ]
         });
 
@@ -276,9 +278,14 @@ app.post('/api/extract', async (req, res) => {
         const cssSize = result.css.length;
         const rulesCount = (result.css.match(/\{/g) || []).length;
 
+        const minified = new CleanCSS({ level: 2 }).minify(result.css);
+        const minifiedCss = minified.styles;
+        const minifiedSize = minifiedCss.length;
+
         logger.info('Extraction réussie', {
             url,
             cssSize,
+            minifiedSize,
             originalSize: result.originalSize,
             rulesCount,
             usedSelectorsCount: result.usedSelectorsCount,
@@ -287,6 +294,9 @@ app.post('/api/extract', async (req, res) => {
 
         res.json({
             css: result.css,
+            minified: minifiedCss,
+            cssSize,
+            minifiedSize,
             originalSize: result.originalSize,
             rulesCount,
             usedSelectorsCount: result.usedSelectorsCount

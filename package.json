@@ -19,6 +19,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "clean-css": "^5.3.3",
     "express": "^4.18.2",
     "puppeteer": "^21.0.0"
   },
