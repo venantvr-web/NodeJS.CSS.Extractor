@@ -270,3 +270,7 @@ MIT © 2025
 ## 📧 Support
 
 Pour toute question ou problème, ouvrez une [issue](https://github.com/votre-username/nodejs-css-extractor/issues) sur GitHub.
+
+## Stack
+
+[![Stack](https://skillicons.dev/icons?i=nodejs,js,express,nginx,linux,git,css&theme=dark)](https://skillicons.dev)
