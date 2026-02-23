@@ -273,4 +273,4 @@ Pour toute question ou problème, ouvrez une [issue](https://github.com/votre-us
 
 ## Stack
 
-[![Stack](https://skillicons.dev/icons?i=nodejs,js,express,nginx,linux,git,css&theme=dark)](https://skillicons.dev)
+[![Stack](https://skillicons.dev/icons?i=nodejs,js,express,nginx,linux,css&theme=dark)](https://skillicons.dev)
